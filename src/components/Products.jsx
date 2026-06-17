@@ -2,19 +2,19 @@ export function Products() {
   const products = [
     {
       name: "Classic Jacket",
-      price: "8900/-",
+      price: "1500/-",
       image:
         "https://images.unsplash.com/photo-1521572267360-ee0c2909d518",
     },
     {
       name: "Modern Sneakers",
-      price: "20,000/-",
+      price: "9000/-",
       image:
         "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
     },
     {
       name: "Elegant Watch",
-      price: "50,000/-",
+      price: "45,000/-",
       image:
         "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
     },
