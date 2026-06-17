@@ -1,5 +1,5 @@
 import "./App.css";
-import { supabase } from "./supabase.js";
+import supabase from "./supabase.js";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Categories from "./components/Categories";
@@ -11,22 +11,22 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import Shop from "./Pages/Shop";
 import Contact from "./Pages/Contact";
-import Products1 from "./Pages/Products1";
 
 function App() {
   return (
     <>
-    
+
       <Navbar/>
 
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/shop" element={<Shop/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/products" element={<Products1/>}/>
       </Routes>
-
+      
       <Hero/>
       <Categories/>
       <Products/>
@@ -36,6 +36,8 @@ function App() {
     </>
   );
 }
+
+
 
 export default App;
  
