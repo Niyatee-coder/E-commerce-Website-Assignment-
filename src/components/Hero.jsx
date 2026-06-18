@@ -1,7 +1,7 @@
 export function Hero() {
   return (
     <section className="hero">
-      {/* Background glow elements required for the premium CSS styling */}
+      
       <div className="hero-glow-1"></div>
       <div className="hero-glow-2"></div>
 
