@@ -1,8 +1,19 @@
+import Hero from "../components/Hero";
+import Categories from "../components/Categories";
+import Products from "../components/Products";
+import Testimonials from "../components/Testimonials";
+import Footer from "../components/Footer";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Welcome to Fashion Hub</p>
-    </div>
+    <>
+
+      <Hero />
+      <Categories />
+      <Products />
+      <Testimonials />
+      <Footer />
+      
+    </>
   );
 }

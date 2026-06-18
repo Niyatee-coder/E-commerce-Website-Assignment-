@@ -1,11 +1,6 @@
 import "./App.css";
 import supabase from "./supabase.js";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Categories from "./components/Categories";
-import Products from "./components/Products";
-import Testimonials from "./components/Testimonials";
-import Footer from "./components/Footer";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -26,18 +21,10 @@ function App() {
         <Route path="/shop" element={<Shop/>}/>
         <Route path="/contact" element={<Contact/>}/>
       </Routes>
-      
-      <Hero/>
-      <Categories/>
-      <Products/>
-      <Testimonials/>
-      <Footer/>
     
     </>
   );
 }
-
-
 
 export default App;
  
