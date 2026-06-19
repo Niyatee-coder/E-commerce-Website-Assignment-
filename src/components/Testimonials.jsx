@@ -1,7 +1,7 @@
 export function Testimonials() {
   return (
     <section className="testimonials">
-      <h2>What Customers Say</h2>
+      <h1>What Customers Say</h1>
 
       <div className="testimonial-box">
         <p>

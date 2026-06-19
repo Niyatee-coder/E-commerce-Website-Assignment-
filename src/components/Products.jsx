@@ -4,7 +4,7 @@ export function Products() {
       name: "Classic Jacket",
       price: "1500/-",
       image:
-        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfhF9-0ZFBYr5YpowP2FmGzc-MXR1C75rmS12Uku2bPw&s=10",
     },
     {
       name: "Modern Sneakers",
@@ -14,7 +14,7 @@ export function Products() {
     },
     {
       name: "Elegant Watch",
-      price: "4000/-",
+      price: "2999/-",
       image:
         "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
     },
@@ -23,7 +23,7 @@ export function Products() {
   return (
     <section className="products">
       <h2>Featured Products</h2>
-
+      <br/>
       <div className="product-grid">
         {products.map((item, index) => (
           <div className="product-card" key={index}>

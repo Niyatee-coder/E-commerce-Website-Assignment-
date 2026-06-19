@@ -1,19 +1,38 @@
 export default function About() {
   return (
-    <div>
-      <center>
-      <br/>
-      <h3><p>Get your favourite brands for 50 - 70 % off. </p></h3>
-      <br/>
-      <section>
-      <div classname="img-container">
-        <img src = "https://play-lh.googleusercontent.com/jIG4eaej6nTAyOY78KIUSD87M4FSvODBvsmfdWvE2R6mYtWLG5kVNd2hrOwsAOc0wFoQqfU44vMbVPNNflR3"
-         width="400"
-         height="400">
-        </img>
-      </div>
+    <div className="about-container">
+
+      <section className="about-hero">
+        <h1>About Fashion Factory</h1>
+        <p>Your one-stop destination for shopping.</p>
       </section>
-      </center>
+
+      <section>
+        <h2>Our Story</h2>
+        <p>
+          Fashion Factory was created to provide customers with quality products,
+          competitive prices, and a seamless shopping experience.
+        </p>
+      </section>
+
+      <section>
+        <h2>Our Mission</h2>
+        <p>
+          We aim to make shopping convenient, affordable,
+          and accessible to everyone.
+        </p>
+      </section>
+
+      <section>
+        <h2>Why Choose Us?</h2>
+        <ul>
+          <li>Quality Products</li>
+          <li>Affordable Prices</li>
+          <li>Secure Payments</li>
+          <li>Excellent Customer Support</li>
+        </ul>
+      </section>
+
     </div>
   );
 }
