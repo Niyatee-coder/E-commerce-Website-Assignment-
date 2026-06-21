@@ -26,15 +26,39 @@ export default function Shop() {
     ,{
       id: 4,
       name: "Salwaar Suit",
-      price: 1500,
+      price: 1299,
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgKHe5sxSeLDWSa6KlaF9J25s8Py963RP3NqpsX9w96g&s=10",
       
     }
     ,{
       id: 5,
       name: "Jeans",
-      price: 1500,
+      price: 1200,
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo9DJMVaEDVBrA__Z42gNlOwMRb9zeJvPtJiNzc1yf9w&s=10",
+      
+    }
+
+    ,{
+      id: 6,
+      name: "Top",
+      price: 999,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2g3q7ded1WEcqGDZAd56vPC8BnzAGDORUp1OyMChroQ&s=10",
+      
+    }
+
+    ,{
+      id: 7,
+      name: "Flats",
+      price: 199,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzs63-FeRT6JhG5-6eZmwL4k_n2URulRfTxjYAs2gDKg&s=10",
+      
+    }
+
+    ,{
+      id: 8,
+      name: "Shirt",
+      price: 299,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOmErChRbQnoR2OaY0ePLZENOwtQb0vD5bEjVdWPN2tg&s=10",
       
     }
   ];
@@ -49,7 +73,7 @@ export default function Shop() {
     <div className="shop-container">
       <center>
         <h1>Shop</h1>
-        
+        <br/>
         <input
           type="text"
           placeholder="Search Products..."
