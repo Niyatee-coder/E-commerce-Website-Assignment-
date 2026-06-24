@@ -29,7 +29,7 @@ export default function Contact() {
 
           <p>📍 Mumbai, India</p>
           <p>📞 +91 9876543210</p>
-          <p>✉ support@fashionfactory.com</p>
+          <p>✉ fashionfactory@gmail.com</p>
           <p>🕒 Mon - Sat : 9AM - 8PM</p>
         </div>
 

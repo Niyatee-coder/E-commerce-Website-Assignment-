@@ -69,9 +69,37 @@ export default function Shop() {
     product.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  const [message, setMessage] = useState("");
+
+const addToCart = () => {
+  setMessage("Added to cart ✅");
+
+  setTimeout(() => {
+    setMessage("");
+  }, 2000);
+};
+
   return (
     <div className="shop-container">
       <center>
+
+        {message && (
+  <div
+    style={{
+      position: "fixed",
+      top: "20px",
+      right: "20px",
+      background: "#28a745",
+      color: "white",
+      padding: "12px 20px",
+      borderRadius: "8px",
+      boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+      zIndex: 1000,
+    }}
+  >
+    {message}
+  </div>
+)}
         <h1>Shop</h1>
         <br/>
         <input
@@ -87,7 +115,9 @@ export default function Shop() {
               <img src={product.image} alt={product.name} />
               <h3>{product.name}</h3>
               <p>₹{product.price}</p>
-              <button>Add to Cart</button>
+              <button onClick={addToCart}>
+                Add to Cart
+              </button>
             </div>
           ))}
         </div>

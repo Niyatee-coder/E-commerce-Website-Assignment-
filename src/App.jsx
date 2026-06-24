@@ -9,7 +9,7 @@ import About from "./Pages/About";
 import Shop from "./Pages/Shop";
 import Contact from "./Pages/Contact";
 
-function App() {
+export default function App() {
   return (
     <>
 
@@ -24,6 +24,4 @@ function App() {
     </>
   );
 }
-
-export default App;
  
