@@ -317,3 +317,277 @@ ul li {
 .contact-info {
   flex: 1;
 }
+
+.login-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#02001b,#120035,#2d0057);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:100px;
+    padding:20px;
+}
+
+.left-panel{
+    width:450px;
+    color:white;
+}
+
+.left-panel h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.left-panel p{
+    font-size:1.1rem;
+    color:#bdbdbd;
+    line-height:1.8;
+}
+
+.login-box{
+    width:380px;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.login-box h2{
+    color:white;
+    text-align:center;
+    margin-bottom:30px;
+    font-size:2rem;
+}
+
+.login-box input{
+    width:100%;
+    padding:16px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:15px;
+    background:rgba(255,255,255,0.12);
+    color:white;
+    font-size:1rem;
+}
+
+.login-box input::placeholder{
+    color:#d0d0d0;
+}
+
+.login-box button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(90deg,#8b5cf6,#c084fc);
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-box button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(192,132,252,.4);
+}
+
+.login-box p{
+    color:white;
+    text-align:center;
+    margin-top:20px;
+}
+
+.login-box span{
+    color:#c084fc;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.signup-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#02001b,#120035,#2d0057);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:100px;
+    padding:20px;
+}
+
+.left-panel{
+    width:450px;
+    color:white;
+}
+
+.left-panel h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.left-panel p{
+    font-size:1.1rem;
+    color:#cfcfcf;
+    line-height:1.8;
+}
+
+.signup-box{
+    width:420px;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.signup-box h2{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+    font-size:2rem;
+}
+
+.signup-box input{
+    width:100%;
+    padding:16px;
+    margin-bottom:18px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:rgba(255,255,255,0.12);
+    color:white;
+    font-size:1rem;
+}
+
+.signup-box input::placeholder{
+    color:#d0d0d0;
+}
+
+.signup-box button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(90deg,#8b5cf6,#c084fc);
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.signup-box button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(192,132,252,.4);
+}
+
+.signup-box p{
+    text-align:center;
+    color:white;
+    margin-top:20px;
+}
+
+.signup-box span{
+    color:#c084fc;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.contact-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#02001b,#120035,#2d0057);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:100px;
+    padding:50px;
+}
+
+.left-panel{
+    width:450px;
+    color:white;
+}
+
+.left-panel h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.left-panel p{
+    color:#d0d0d0;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.contact-info{
+    margin-top:50px;
+}
+
+.contact-info h2{
+    margin-bottom:20px;
+    color:#fff;
+}
+
+.contact-info p{
+    margin-bottom:18px;
+    font-size:1rem;
+}
+
+.contact-box{
+    width:450px;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.contact-box h2{
+    color:white;
+    text-align:center;
+    margin-bottom:30px;
+    font-size:2rem;
+}
+
+.contact-box input,
+.contact-box textarea{
+    width:100%;
+    padding:16px;
+    margin-bottom:20px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:rgba(255,255,255,.12);
+    color:white;
+    font-size:1rem;
+    resize:none;
+}
+
+.contact-box input::placeholder,
+.contact-box textarea::placeholder{
+    color:#d0d0d0;
+}
+
+.contact-box button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(90deg,#8b5cf6,#c084fc);
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-box button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(192,132,252,.4);
+}
+
