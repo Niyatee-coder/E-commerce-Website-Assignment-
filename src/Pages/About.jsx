@@ -6,7 +6,9 @@ export default function About() {
       <section className="hero">
         <h1>About Fashion Factory</h1>
         <p>
+          <h2>
           Style That Speaks. Fashion That Inspires.
+          </h2>
         </p>
       </section>
 
@@ -115,16 +117,18 @@ export default function About() {
       <section className="section">
         <h2>What We Offer</h2>
 
-        <div className="categories">
-          <div>👕 Men's Fashion</div>
-          <div>👗 Women's Fashion</div>
-          <div>👖 Casual Wear</div>
-          <div>👟 Footwear</div>
-          <div>👜 Bags</div>
-          <div>⌚ Watches</div>
-          <div>💍 Jewellery</div>
-          <div>🕶️ Accessories</div>
-        </div>
+        <ul className="categories">
+          <h3>
+          <li>👕 Men's Fashion</li>
+          <li>👗 Women's Fashion</li>
+          <li>👖 Casual Wear</li>
+          <li>👟 Footwear</li>
+          <li>👜 Bags</li>
+          <li>⌚ Watches</li>
+          <li>💍 Jewellery</li>
+          <li>🕶️ Accessories</li>
+          </h3>
+        </ul>
       </section>
 
       {/* Stats */}
@@ -172,7 +176,7 @@ export default function About() {
           Fashion Factory.
         </p>
 
-        <button>Shop Now</button>
+        <button onClick={() => window.location.href = '/shop'}>Shop Now</button>
       </section>
 
     </div>
