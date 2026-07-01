@@ -591,3 +591,96 @@ ul li {
     box-shadow:0 8px 20px rgba(192,132,252,.4);
 }
 
+/* ================= STATS ================= */
+
+.stats{
+    max-width:1200px;
+    margin:100px auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.stats div{
+    background:#362062;
+    color:white;
+    border-radius:20px;
+    padding:45px 20px;
+    transition:.4s;
+}
+
+.stats div:hover{
+    transform:translateY(-10px); 
+    background:linear-gradient(135deg, #ac4dba, #4aa6b9);
+}
+
+.stats h2{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.stats p{
+    font-size:1.05rem;
+}
+
+/* ================= VALUES ================= */
+
+.values{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.value{
+    background:#362062;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(13, 2, 54, 0.08);
+    transition:.4s;
+}
+
+.value:hover{
+    transform:translateY(-10px);
+}
+
+.value h3{
+    color:#ffffff;
+    margin-bottom:15px;
+}
+
+/* ================= WHY CHOOSE US ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.card{
+    background:#362062;
+    border-radius:20px;
+    padding:35px;
+    transition:.4s;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.card span{
+    font-size:3rem;
+}
+
+.card h3{
+    margin:20px 0;
+}
+
+.card p{
+    color:#777;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+
