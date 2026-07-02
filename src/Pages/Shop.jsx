@@ -1,127 +1,130 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import supabase from "../supabase";
 
 export default function Shop() {
-  const products = [
-    {
-      id: 1,
-      name: "Wireless Headphones",
-      price: 1999,
-      image: "https://www.portronics.com/cdn/shop/files/Portronics_Muff_M3_best_headphones_under_5000.jpg?v=1744893854",
-      
-    }
-    ,{
-      id: 2,
-      name: "Smart Watch",
-      price: 2999,
-      image: "https://www.lapcare.com/cdn/shop/files/GoldFitso3.jpg?v=1757325592&width=2048",
-      
-    },
-    {
-      id: 3,
-      name: "Running Shoes",
-      price: 2499,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnaamraug-lsORM9FtvplmoxNce1C_dj02A8W7hZEjI5Vk1k6G5rlMMN5l&s=10",
-      
-    }
-    ,{
-      id: 4,
-      name: "Salwaar Suit",
-      price: 1299,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgKHe5sxSeLDWSa6KlaF9J25s8Py963RP3NqpsX9w96g&s=10",
-      
-    }
-    ,{
-      id: 5,
-      name: "Jeans",
-      price: 1200,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo9DJMVaEDVBrA__Z42gNlOwMRb9zeJvPtJiNzc1yf9w&s=10",
-      
-    }
-
-    ,{
-      id: 6,
-      name: "Top",
-      price: 999,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2g3q7ded1WEcqGDZAd56vPC8BnzAGDORUp1OyMChroQ&s=10",
-      
-    }
-
-    ,{
-      id: 7,
-      name: "Flats",
-      price: 199,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzs63-FeRT6JhG5-6eZmwL4k_n2URulRfTxjYAs2gDKg&s=10",
-      
-    }
-
-    ,{
-      id: 8,
-      name: "Shirt",
-      price: 299,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOmErChRbQnoR2OaY0ePLZENOwtQb0vD5bEjVdWPN2tg&s=10",
-      
-    }
-  ];
-
-  const [search, setSearch] = useState("");
-
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(search.toLowerCase())
-  );
-
+  const [products, setProducts] = useState([]);
   const [message, setMessage] = useState("");
 
-const addToCart = () => {
-  setMessage("Added to cart ✅");
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
-  setTimeout(() => {
-    setMessage("");
-  }, 2000);
-};
+  async function fetchProducts() {
+    const { data, error } = await supabase
+      .from("products")
+      .select("*");
+
+    if (!error) {
+      setProducts(data);
+    }
+  }
+
+  function addToCart(product) {
+    setMessage("Added to cart ✅");
+
+    setTimeout(() => {
+      setMessage("");
+    }, 2000);
+  }
 
   return (
-    <div className="shop-container">
-      <center>
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "#0f0225",
+        padding: "40px",
+      }}
+    >
+      {message && (
+        <div
+          style={{
+            position: "fixed",
+            top: "20px",
+            right: "20px",
+            backgroundColor: "green",
+            color: "white",
+            padding: "12px 20px",
+            borderRadius: "8px",
+            fontWeight: "bold",
+            zIndex: 9999,
+          }}
+        >
+          {message}
+        </div>
+      )}
+    
+      <h1
+        style={{
+          textAlign: "center",
+          marginBottom: "40px",
+          color: "#ffffff",
+          fontSize: "42px",
+          fontWeight: "bold",
+          letterSpacing: "2px",
+        }}
+      >
+        Fashion Factory
+      </h1>
 
-        {message && (
-  <div
-    style={{
-      position: "fixed",
-      top: "20px",
-      right: "20px",
-      background: "#28a745",
-      color: "white",
-      padding: "12px 20px",
-      borderRadius: "8px",
-      boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
-      zIndex: 1000,
-    }}
-  >
-    {message}
-  </div>
-)}
-        <h1>Shop</h1>
-        <br/>
-        <input
-          type="text"
-          placeholder="Search Products..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        
-        <div className="product-grid">
-          {filteredProducts.map((product) => (
-            <div className="product-card" key={product.id}>
-              <img src={product.image} alt={product.name} />
-              <h3>{product.name}</h3>
-              <p>₹{product.price}</p>
-              <button onClick={addToCart}>
-                Add to Cart
+      <div
+        className="product-grid"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
+          gap: "30px",
+        }}
+      >
+        {products.map((product) => (
+          <div
+            key={product.id}
+            style={{
+              background: "#ffffff",
+              borderRadius: "15px",
+              overflow: "hidden",
+              boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+              transition: "0.3s",
+              textAlign: "center",
+              paddingBottom: "20px",
+            }}
+          >
+            <img
+              src={product.image}
+              alt={product.name}
+              style={{
+                width: "100%",
+                height: "280px",
+                objectFit: "cover",
+              }}
+            />
+
+            <div style={{ padding: "20px" }}>
+              <h2
+                style={{
+                  marginBottom: "10px",
+                  color: "#000000",
+                  fontSize: "24px",
+                }}
+              >
+                {product.name}
+              </h2>
+
+              <h3
+                style={{
+                  color: "#000000",
+                  marginBottom: "20px",
+                  fontSize: "22px",
+                }}
+              >
+                ₹{product.price}
+              </h3>
+
+              <button className="button" onClick={() => addToCart(product)}>
+                Add to Cart 🛒
               </button>
             </div>
-          ))}
-        </div>
-      </center>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
